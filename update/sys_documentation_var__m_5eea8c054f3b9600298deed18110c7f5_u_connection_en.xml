@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_connection" label="Connection" language="en" table="var__m_5eea8c054f3b9600298deed18110c7f5">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_connection</element>
+            <help>Connection type (default=smart)</help>
+            <hint/>
+            <label>Connection</label>
+            <language>en</language>
+            <name>var__m_5eea8c054f3b9600298deed18110c7f5</name>
+            <plural>Connections</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>reuben.stump</sys_created_by>
+            <sys_created_on>2016-06-02 03:07:28</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>ed3d0c454f3b9600298deed18110c777</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Connection</sys_name>
+            <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_5eea8c054f3b9600298deed18110c7f5_u_connection_en</sys_update_name>
+            <sys_updated_by>reuben.stump</sys_updated_by>
+            <sys_updated_on>2016-06-02 03:07:28</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
