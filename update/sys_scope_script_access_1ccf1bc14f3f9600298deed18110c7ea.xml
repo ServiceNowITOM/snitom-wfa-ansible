@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_script_access">
+    <sys_scope_script_access action="INSERT_OR_UPDATE">
+        <example_stack_trace>Default-thread-8
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.getCurrentStackTrace(ScopeAccessProvider.java:234)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.record(ScopeAccessProvider.java:202)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.access$100(ScopeAccessProvider.java:81)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider.recordAccess(ScopeAccessProvider.java:64)
+	com.glide.sys.fencing.dependency.ScopeAccessRecorder.record(ScopeAccessRecorder.java:13)
+	com.glide.script.system.ASystemInclude.recordCrossScopeDependency(ASystemInclude.java:153)
+	com.glide.script.system.ASystemInclude.include(ASystemInclude.java:133)
+	com.glide.script.AGlideRhinoScopeHandler.isScriptInclude(AGlideRhinoScopeHandler.java:45)
+	com.glide.script.GlideRhinoScopeHandler.found(GlideRhinoScopeHandler.java:27)
+	com.glide.script.ARhinoScope.get(ARhinoScope.java:77)
+	com.glide.script.RhinoScope.get(RhinoScope.java:52)
+	org.mozilla.javascript.ScriptableObject.getProperty(ScriptableObject.java:2323)
+	org.mozilla.javascript.ScriptRuntime.getExistingCtor(ScriptRuntime.java:1289)
+	org.mozilla.javascript.Context.newObject(Context.java:1637)
+	com.glide.script.RhinoObject.&lt;init&gt;(RhinoObject.java:57)
+	com.glide.script.RhinoObject.&lt;init&gt;(RhinoObject.java:49)
+	com.glide.script.GlideRhinoObject.&lt;init&gt;(GlideRhinoObject.java:40)
+	com.snc.runbook_automation.element.providers.OrchestrationActivityProvider.callMIDFinder(OrchestrationActivityProvider.java:264)
+	com.snc.runbook_automation.element.providers.OrchestrationActivityProvider.pickMIDServer(OrchestrationActivityProvider.java:242)
+	com.snc.runbook_automation.element.providers.OrchestrationActivityProvider.pickMIDServer(OrchestrationActivityProvider.java:259)
+	com.snc.runbook_automation.element.providers.SSHProvider.getAgent(SSHProvider.java:186)
+	com.snc.runbook_automation.element.providers.OrchestrationActivityProvider$1.doEvent(OrchestrationActivityProvider.java:143)
+	com.glideapp.workflow.element.ElementActivityProvider.handleEvent(ElementActivityProvider.java:183)
+	com.glideapp.workflow.element.ExecutingActivity.handleEvent(ExecutingActivity.java:55)
+	com.glideapp.workflow.queue.activity.ActivityManager.runActivity(ActivityManager.java:301)
+	com.glideapp.workflow.queue.activity.ActivityManager.runActivities(ActivityManager.java:239)
+	com.glideapp.workflow.queue.activity.ActivityManager.processCommand(ActivityManager.java:152)
+	com.glideapp.workflow.queue.command.ActiveCommandQueueDelegate.signal(ActiveCommandQueueDelegate.java:96)
+	com.glideapp.workflow.queue.command.ActiveCommandQueueDelegate.processCommand(ActiveCommandQueueDelegate.java:61)
+	com.glideapp.workflow.queue.command.CommandManager$CommandQueue.processCommand(CommandManager.java:324)
+	com.glideapp.workflow.queue.command.CommandManager.queue(CommandManager.java:131)
+	com.glideapp.workflow.WorkflowHelper.startFlow(WorkflowHelper.java:103)
+	com.glideapp.workflow.WorkflowRunner.startWorkflow(WorkflowRunner.java:119)
+	com.glideapp.workflow.ui.WorkflowDiagramProcessor.process(WorkflowDiagramProcessor.java:78)
+	com.glide.processors.XMLHttpProcessor.processJavaAJAX(XMLHttpProcessor.java:143)
+	com.glide.processors.XMLHttpProcessor.process(XMLHttpProcessor.java:100)
+	com.glide.processors.AProcessor.runProcessor(AProcessor.java:412)
+	com.glide.processors.AProcessor.processTransaction(AProcessor.java:187)
+	com.glide.processors.ProcessorRegistry.process(ProcessorRegistry.java:165)
+	com.glide.ui.GlideServletTransaction.process(GlideServletTransaction.java:49)
+	com.glide.sys.ServletTransaction.run(ServletTransaction.java:34)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	java.lang.Thread.run(Thread.java:745)
+</example_stack_trace>
+        <script_name>MIDServerFinder</script_name>
+        <source_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</source_scope>
+        <sys_class_name>sys_scope_script_access</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-02 18:27:21</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>1ccf1bc14f3f9600298deed18110c7ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MIDServerFinder</sys_name>
+        <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+        <sys_update_name>sys_scope_script_access_1ccf1bc14f3f9600298deed18110c7ea</sys_update_name>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-02 18:27:21</sys_updated_on>
+        <target_scope display_value="Global">global</target_scope>
+    </sys_scope_script_access>
+</record_update>

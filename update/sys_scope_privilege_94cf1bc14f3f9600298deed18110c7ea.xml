@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-02 18:27:21</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>94cf1bc14f3f9600298deed18110c7ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MIDServerFinder</sys_name>
+        <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+        <sys_update_name>sys_scope_privilege_94cf1bc14f3f9600298deed18110c7ea</sys_update_name>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-02 18:27:21</sys_updated_on>
+        <target_name>MIDServerFinder</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_script_include</target_type>
+    </sys_scope_privilege>
+</record_update>

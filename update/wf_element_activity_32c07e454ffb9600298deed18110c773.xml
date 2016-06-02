@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="SSH">ebee8be6d7022100dfc260affd610368</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description>Ansible-Pull activity was written against ansible-pull versions &gt;= 2.0.  Arguments for ansible-pull on versions prior to version 2.0 may not work and are effectively not supported by this activity.</description>
+        <image>ansible_bw.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"checkout","type":"STRING","mandatory":false,"defaultValue":"master"},{"name":"connection","type":"STRING","mandatory":false},{"name":"destination","type":"STRING","mandatory":false},{"name":"extra_vars","type":"STRING","mandatory":false},{"name":"force","type":"BOOLEAN","mandatory":false,"defaultValue":"False"},{"name":"full","type":"BOOLEAN","mandatory":false,"defaultValue":"False"},{"name":"inventory","type":"STRING","mandatory":false},{"name":"limit","type":"STRING","mandatory":false},{"name":"module_name","type":"STRING","mandatory":false},{"name":"module_path","type":"STRING","mandatory":false},{"name":"if_changed","type":"BOOLEAN","mandatory":false,"defaultValue":"False"},{"name":"private_key","type":"STRING","mandatory":false},{"name":"purge","type":"BOOLEAN","mandatory":false,"defaultValue":"False"},{"name":"scp_extra_args","type":"STRING","mandatory":false},{"name":"sftp_extra_args","type":"STRING","mandatory":false},{"name":"skip_tags","type":"STRING","mandatory":false},{"name":"sleep","type":"INTEGER","mandatory":false},{"name":"ssh_common_args","type":"STRING","mandatory":false},{"name":"ssh_extra_args","type":"STRING","mandatory":false},{"name":"tags","type":"STRING","mandatory":false},{"name":"timeout","type":"INTEGER","mandatory":false},{"name":"url","type":"STRING","mandatory":true},{"name":"remote_user","type":"STRING","mandatory":false},{"name":"vault_password_file","type":"STRING","mandatory":false},{"name":"verbose","type":"STRING","mandatory":false},{"name":"verify_commit","type":"BOOLEAN","mandatory":false,"defaultValue":"False"},{"name":"accept_key","type":"BOOLEAN","mandatory":false,"defaultValue":"False"},{"name":"target_host","type":"STRING","mandatory":true}]}</input_meta>
+        <input_process_script><![CDATA[executionParam.command = '';
+
+/* Wrap command output in result tags to capture playbook run results */
+executionParam.command += "echo %%contents%%\n";
+executionParam.command += "ansible-pull";
+executionParam.command += " --url=" + activityInput.url; // required
+
+// --checkout (default: 'master')
+executionParam.command += " --checkout=" + activityInput.checkout;
+
+// --accept-host-key (default: false)
+if (activityInput.accept_key)
+	executionParam.command += " --accept-host-key";
+
+// --connection
+if (activityInput.connection)
+	executionParam.command += " --connection=" + activityInput.connection;
+
+// --directory
+if (activityInput.destination)
+	executionParam.command += " --directory=" + activityInput.destination;
+
+// --extra-vars
+if (activityInput.extra_vars)
+	executionParam.command += " --extra-vars='" + activityInput.extra_vars + "'";
+
+// --force
+if (activityInput.force)
+	executionParam.command += " --force";
+
+// --full
+if (activityInput.full)
+	executionParam.command += " --full";
+
+// --inventory-file
+if (activityInput.inventory)
+	executionParam.command += " --inventory-file='" + activityInput.inventory + "'";
+
+// --limit
+if (activityInput.limit)
+	executionParam.command += " --limit='" + activityInput.limit + "'";
+
+// --module-name
+if (activityInput.module_name)
+	executionParam.command += " --module-name=" + activityInput.module_name;
+
+// --module-path
+if (activityInput.module_path)
+	executionParam.command += " --module_path='" + activityInput.module_path + "'";
+
+// --only-if-changed
+if (activityInput.if_changed)
+	executionParam.command += " --only-if-changed";
+
+// --private-key
+if (activityInput.private_key)
+	executionParam.command += " --private-key='" + activityInput.private_key + "'";
+
+// --purge
+if (activityInput.purge)
+	executionParam.command += " --purge";
+
+// --scp-extra-args
+if (activityInput.scp_extra_args)
+	executionParam.command += " --scp-extra-args='" + activityInput.scp_extra_args + "'";
+
+// --sftp-extra-args
+if (activityInput.sftp_extra_args)
+	executionParam.command += " --sftp-extra-args='" + activityInput.sftp_extra_args + "'";
+
+// --skip-tags
+if (activityInput.skip_tags)
+	executionParam.command += " --skip-tags='" + activityInput.skip_tags + "'";
+
+// --sleep
+if (activityInput.sleep)
+	executionParam.command += " --sleep=" + activityInput.sleep;
+
+// --ssh-common-args
+if (activityInput.ssh_common_args)
+	executionParam.command += " --ssh-common-args='" + activityInput.ssh_common_args + "'";
+
+// --ssh_extra_args
+if (activityInput.ssh_extra_args)
+	executionParam.command += " --ssh-extra-args='" + activityInput.ssh_extra_args + "'";
+
+// --tags
+if (activityInput.tags)
+	executionParam.command += " --tags='" + activityInput.tags + "'";
+	
+// --timeout
+if (activityInput.timeout)
+	executionParam.command += " --timeout=" + activityInput.timeout;
+
+// --user
+if (activityInput.remote_user)
+	executionParam.command += " --user=" + activityInput.remote_user;
+
+// --vault-password-file
+if (activityInput.vault_password_file) {
+	executionParam.command += " --vault-password-file='" + 
+		activityInput.vault_password_file + "'";
+}
+
+// --verbose
+if (activityInput.verbose) {
+	executionParam.command += " --verbose";
+}
+
+// --verify-commit
+if (activityInput.verify_commit) {
+	executionParam.command += " --verify-commit";
+}
+executionParam.command += "\n\n";
+executionParam.command += "RETCODE=$?\n";
+executionParam.command += "echo %%\n";
+
+executionParam.command += "echo %%retcode%%\n";
+executionParam.command += "echo $RETCODE\n";
+executionParam.command += "echo %%\n";]]></input_process_script>
+        <input_transform>{"source":"${activityInput.target_host}","command":"","directory":"/tmp","credential_tag":"","midCapabilities":"2d20f2760a0006bc095bf17ae4e0d4ee","long_running":"true","must_sudo":"false"}</input_transform>
+        <local_variables>{"name":"Local","type":"DATA_OBJECT","properties":[{"name":"retcode","type":"STRING"}]}</local_variables>
+        <name>Ansible-Pull</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"result","type":"STRING"},{"name":"contents","type":"STRING"}]}</output_meta>
+        <output_process_script><![CDATA[if(activityLocal.retcode == "0") {
+    activityOutput.result = "success";
+} else {
+    activityOutput.result = "failure";
+}]]></output_process_script>
+        <output_transform>[{"toLink":"activityLocal.retcode","description":"Playbook exit code","to":"retcode","toType":"string","toDestination":"activityLocal","sourceLabel":"executionResult.tags[\"retcode\"]","from":"${executionResult.tags[\"retcode\"]}","fromSource":"executionResult","type":"Direct","children":"[]","translation":""},{"toLink":"activityOutput.contents","description":"Playbook log contents","to":"contents","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.tags[\"contents\"]","from":"${executionResult.tags[\"contents\"]}","fromSource":"executionResult","type":"Direct","children":"[]","translation":""}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description>Run ansible-pull on remote node</short_description>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-02 15:02:11</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>32c07e454ffb9600298deed18110c773</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>Ansible-Pull</sys_name>
+        <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+        <sys_update_name>wf_element_activity_32c07e454ffb9600298deed18110c773</sys_update_name>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-02 19:26:59</sys_updated_on>
+        <version_container_id>b2a7be244fb39600298deed18110c7ce</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=32c07e454ffb9600298deed18110c773"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>true</published>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-02 15:02:11</sys_created_on>
+        <sys_id>36c07e454ffb9600298deed18110c773</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-02 19:26:59</sys_updated_on>
+        <valid_from>2016-06-02 19:26:59</valid_from>
+        <valid_to/>
+        <version>2</version>
+        <version_container_id>b2a7be244fb39600298deed18110c7ce</version_container_id>
+        <wf_element_definition display_value="Ansible-Pull">32c07e454ffb9600298deed18110c773</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Ansible-Pull">32c07e454ffb9600298deed18110c773</activity_definition>
+        <condition>activityOutput.result == "success"</condition>
+        <derived_definition>ff665b344ff79600298deed18110c7da</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-02 15:02:11</sys_created_on>
+        <sys_id>7ac07e454ffb9600298deed18110c773</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-02 15:02:11</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Ansible-Pull">32c07e454ffb9600298deed18110c773</activity_definition>
+        <condition/>
+        <derived_definition>fcb957744ff79600298deed18110c75c</derived_definition>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-02 15:02:11</sys_created_on>
+        <sys_id>f6c07e454ffb9600298deed18110c773</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-02 15:02:11</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=b2a7be244fb39600298deed18110c7ce^sys_id!=36c07e454ffb9600298deed18110c773">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=b2a7be244fb39600298deed18110c7ce^pinned=true">
+        <new_activity_definition>32c07e454ffb9600298deed18110c773</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity. To update the activity, check out the workflow, select the activity, right click and select update activity to use the latest version.</notes>
+    </wf_activity>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=b2a7be244fb39600298deed18110c7ce^pinned=false">
+        <activity_definition>32c07e454ffb9600298deed18110c773</activity_definition>
+        <activity_definition_updated>true</activity_definition_updated>
+        <notes>This activity was updated to a newer version since the workflow was published.</notes>
+    </wf_activity>
+</record_update>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="wf_element_activity">
-    <wf_element_activity action="INSERT_OR_UPDATE">
+    <wf_element_activity action="UPDATE">
         <access>public</access>
         <attributes/>
         <base_provider display_value="SSH">ebee8be6d7022100dfc260affd610368</base_provider>
@@ -161,71 +161,4 @@ executionParam.command += "echo %%\n";]]></input_process_script>
         <version_container_id>b2a7be244fb39600298deed18110c7ce</version_container_id>
     </wf_element_activity>
     <sys_translated_text action="delete_multiple" query="documentkey=e817be244fb39600298deed18110c7b4"/>
-    <wf_versionable action="INSERT_OR_UPDATE">
-        <checked_out/>
-        <checked_out_by/>
-        <published>true</published>
-        <sys_created_by>reuben.stump</sys_created_by>
-        <sys_created_on>2016-06-01 02:15:15</sys_created_on>
-        <sys_id>faa7be244fb39600298deed18110c7ce</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>reuben.stump</sys_updated_by>
-        <sys_updated_on>2016-06-02 03:29:42</sys_updated_on>
-        <valid_from>2016-06-02 03:29:42</valid_from>
-        <valid_to/>
-        <version>1</version>
-        <version_container_id>b2a7be244fb39600298deed18110c7ce</version_container_id>
-        <wf_element_definition display_value="Ansible-Pull">e817be244fb39600298deed18110c7b4</wf_element_definition>
-    </wf_versionable>
-    <wf_condition_default action="INSERT_OR_UPDATE">
-        <activity_definition display_value="Ansible-Pull">e817be244fb39600298deed18110c7b4</activity_definition>
-        <condition/>
-        <derived_definition/>
-        <else_flag>true</else_flag>
-        <error>false</error>
-        <event>false</event>
-        <event_name/>
-        <name>Failure</name>
-        <order>200</order>
-        <short_description/>
-        <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>reuben.stump</sys_created_by>
-        <sys_created_on>2016-06-01 23:23:07</sys_created_on>
-        <sys_id>fcb957744ff79600298deed18110c75c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>reuben.stump</sys_updated_by>
-        <sys_updated_on>2016-06-01 23:34:10</sys_updated_on>
-    </wf_condition_default>
-    <wf_condition_default action="INSERT_OR_UPDATE">
-        <activity_definition display_value="Ansible-Pull">e817be244fb39600298deed18110c7b4</activity_definition>
-        <condition>activityOutput.result == "success"</condition>
-        <derived_definition/>
-        <else_flag>false</else_flag>
-        <error>false</error>
-        <event>false</event>
-        <event_name/>
-        <name>Success</name>
-        <order>100</order>
-        <short_description/>
-        <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>reuben.stump</sys_created_by>
-        <sys_created_on>2016-06-01 23:23:07</sys_created_on>
-        <sys_id>ff665b344ff79600298deed18110c7da</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>reuben.stump</sys_updated_by>
-        <sys_updated_on>2016-06-01 23:34:10</sys_updated_on>
-    </wf_condition_default>
-    <wf_versionable action="update_multiple" query="version_container_id=b2a7be244fb39600298deed18110c7ce^sys_id!=faa7be244fb39600298deed18110c7ce">
-        <published>false</published>
-    </wf_versionable>
-    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=b2a7be244fb39600298deed18110c7ce^pinned=true">
-        <new_activity_definition>e817be244fb39600298deed18110c7b4</new_activity_definition>
-        <out_of_date>true</out_of_date>
-        <notes>There is a newer version of this activity. To update the activity, check out the workflow, select the activity, right click and select update activity to use the latest version.</notes>
-    </wf_activity>
-    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=b2a7be244fb39600298deed18110c7ce^pinned=false">
-        <activity_definition>e817be244fb39600298deed18110c7b4</activity_definition>
-        <activity_definition_updated>true</activity_definition_updated>
-        <notes>This activity was updated to a newer version since the workflow was published.</notes>
-    </wf_activity>
 </record_update>
