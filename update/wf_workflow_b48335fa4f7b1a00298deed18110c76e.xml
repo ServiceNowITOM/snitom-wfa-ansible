@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"ends":["788335fa4f7b1a00298deed18110c76f"],"activities":{},"subflows":[],"stages":{}}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type>run_match</condition_type>
+        <description>Run ansible-pull on remote node</description>
+        <expected_sequences>f08335fa4f7b1a00298deed18110c76f,0793f5fa4f7b1a00298deed18110c732,8c26f13e4f7b1a00298deed18110c732,788335fa4f7b1a00298deed18110c76f</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>f08335fa4f7b1a00298deed18110c76f,0793f5fa4f7b1a00298deed18110c732,8c26f13e4f7b1a00298deed18110c732,788335fa4f7b1a00298deed18110c76f</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Ansible-Pull - Run On Nodes</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field/>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">f08335fa4f7b1a00298deed18110c76f</start>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:03:48</sys_created_on>
+        <sys_id>b88335fa4f7b1a00298deed18110c76e</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 23:07:33</sys_updated_on>
+        <table>global</table>
+        <timezone/>
+        <validated>false</validated>
+        <workflow display_value="Ansible-Pull - Run On Nodes">b48335fa4f7b1a00298deed18110c76e</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description>Run ansible-pull on remote node</description>
+        <name>Ansible-Pull - Run On Nodes</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:03:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b48335fa4f7b1a00298deed18110c76e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Ansible-Pull - Run On Nodes</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+        <sys_update_name>wf_workflow_b48335fa4f7b1a00298deed18110c76e</sys_update_name>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 23:07:33</sys_updated_on>
+        <table/>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:03:48</sys_created_on>
+        <sys_id>f08335fa4f7b1a00298deed18110c76f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:03:48</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Ansible-Pull - Run On Nodes">b88335fa4f7b1a00298deed18110c76e</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">f08335fa4f7b1a00298deed18110c76f</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:03:48</sys_created_on>
+        <sys_id>b48335fa4f7b1a00298deed18110c76f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:03:48</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:03:48</sys_created_on>
+        <sys_id>788335fa4f7b1a00298deed18110c76f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:23:38</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Ansible-Pull - Run On Nodes">b88335fa4f7b1a00298deed18110c76e</workflow_version>
+        <x>550</x>
+        <y>426</y>
+    </wf_activity>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Parallel Flow Launcher">35ef56111b211100adca1e094f071315</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>6</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Run Ansible-Pull On Nodes</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>8c26f13e4f7b1a00298deed18110c732</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:41:58</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Ansible-Pull - Run On Nodes">b88335fa4f7b1a00298deed18110c76e</workflow_version>
+        <x>312</x>
+        <y>268</y>
+    </wf_activity>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>8376393e4f7b1a00298deed18110c79f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:23:06</sys_updated_on>
+        <value/>
+        <variable display_value="">713142e11b211100adca1e094f0713f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>4b76393e4f7b1a00298deed18110c79e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:23:06</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">7608dbca1b121100adca1e094f071355</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>cf76393e4f7b1a00298deed18110c79e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:16:47</sys_updated_on>
+        <value>5eea8c054f3b9600298deed18110c7f5</value>
+        <variable display_value="">d698838a1b121100adca1e094f071315</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>c776393e4f7b1a00298deed18110c7a0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:41:58</sys_updated_on>
+        <value>&#13;
+coordinator = new global.WorkflowCoordinator({workflow: 'Ansible-Pull - Run On Node'});&#13;
+for (var i=0; i&lt;workflow.scratchpad.targets.length; i++) {&#13;
+    coordinator.add({&#13;
+        u_targethost: workflow.scratchpad.targets[i],&#13;
+        u_repositoryurl: workflow.inputs.u_repositoryurl,&#13;
+        u_purge: true&#13;
+     });&#13;
+}&#13;
+&#13;
+coordinator;&#13;
+</value>
+        <variable display_value="">22dea7431b211100adca1e094f0713f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>8f76393e4f7b1a00298deed18110c79f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:16:47</sys_updated_on>
+        <value/>
+        <variable display_value="">428bf90eff1331009267ffffffffff80</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>0b76393e4f7b1a00298deed18110c79f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:16:47</sys_updated_on>
+        <value>25</value>
+        <variable display_value="">e44186731b211100adca1e094f0713e0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>4776393e4f7b1a00298deed18110c79f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:16:47</sys_updated_on>
+        <value>5</value>
+        <variable display_value="">7b81c6731b211100adca1e094f07136e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>cb76393e4f7b1a00298deed18110c79f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:06:22</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">0a2b9e591b221100adca1e094f07130e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>4376393e4f7b1a00298deed18110c7a0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:29:52</sys_updated_on>
+        <value>// To access the flow that completed, use the 'flow' variable.&#13;
+//  &#13;
+//     var flowOutput = flow.output;&#13;
+//&#13;
+workflow.debug("Ansible-Pull completed: " + flow.contextId);</value>
+        <variable display_value="">006b9e591b221100adca1e094f0713a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>800</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>0776393e4f7b1a00298deed18110c7a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:29:52</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">662e36101b221100adca1e094f0713a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>8c26f13e4f7b1a00298deed18110c732</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>0f76393e4f7b1a00298deed18110c79e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:29:52</sys_updated_on>
+        <value>// To access the set of completed workflows use the 'coordinator' variable.&#13;
+//&#13;
+//  var flow1Result = coordinator.getFlow(1).output;&#13;
+//&#13;
+workflow.debug("All Ansible-Pull workflows completed");</value>
+        <variable display_value="">e47e76101b221100adca1e094f07134e</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Run Ansible-Pull On Nodes">8c26f13e4f7b1a00298deed18110c732</activity>
+        <condition>true</condition>
+        <condition_default display_value="Finished">4ae182211b311100adca1e094f07131d</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Finished</name>
+        <order>200</order>
+        <short_description>Completed successfully</short_description>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:47</sys_created_on>
+        <sys_id>cb76393e4f7b1a00298deed18110c7a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:16:47</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Select Target Hosts</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:06:26</sys_created_on>
+        <sys_id>0793f5fa4f7b1a00298deed18110c732</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 23:02:21</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Ansible-Pull - Run On Nodes">b88335fa4f7b1a00298deed18110c76e</workflow_version>
+        <x>61</x>
+        <y>139</y>
+    </wf_activity>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>0793f5fa4f7b1a00298deed18110c732</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:06:26</sys_created_on>
+        <sys_id>531479fa4f7b1a00298deed18110c742</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 23:02:21</sys_updated_on>
+        <value>workflow.scratchpad.targets = [ ];&#13;
+&#13;
+targets = new GlideRecord('cmdb_ci_server');&#13;
+targets.addQuery('fqdn', 'ENDSWITH', workflow.inputs.u_domainsuffix);&#13;
+targets.query();&#13;
+&#13;
+while (targets.next()) {&#13;
+	workflow.scratchpad.targets.push("" + targets.ip_address);&#13;
+}</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Select Target Hosts">0793f5fa4f7b1a00298deed18110c732</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:06:26</sys_created_on>
+        <sys_id>571479fa4f7b1a00298deed18110c742</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:06:26</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">571479fa4f7b1a00298deed18110c742</condition>
+        <from display_value="Select Target Hosts">0793f5fa4f7b1a00298deed18110c732</from>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:20:24</sys_created_on>
+        <sys_id>1b47f93e4f7b1a00298deed18110c7ed</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 22:23:19</sys_updated_on>
+        <to display_value="Run Ansible-Pull On Nodes">8c26f13e4f7b1a00298deed18110c732</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">b48335fa4f7b1a00298deed18110c76f</condition>
+        <from display_value="Begin">f08335fa4f7b1a00298deed18110c76f</from>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:03:49</sys_created_on>
+        <sys_id>7c83b5fa4f7b1a00298deed18110c7a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:06:29</sys_updated_on>
+        <to display_value="Select Target Hosts">0793f5fa4f7b1a00298deed18110c732</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Finished">cb76393e4f7b1a00298deed18110c7a0</condition>
+        <from display_value="Run Ansible-Pull On Nodes">8c26f13e4f7b1a00298deed18110c732</from>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:16:56</sys_created_on>
+        <sys_id>f086f53e4f7b1a00298deed18110c742</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:20:11</sys_updated_on>
+        <to display_value="End">788335fa4f7b1a00298deed18110c76f</to>
+    </wf_transition>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Domain Suffix</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>u_domainsuffix</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Domain Suffix</label>
+        <mandatory>true</mandatory>
+        <max_length>256</max_length>
+        <model_id>b48335fa4f7b1a00298deed18110c76e</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_b48335fa4f7b1a00298deed18110c76e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:09:04</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6194bdfa4f7b1a00298deed18110c74b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Domain Suffix</sys_name>
+        <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+        <sys_update_name>var_dictionary_6194bdfa4f7b1a00298deed18110c74b</sys_update_name>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:44:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Repository URL</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>u_repositoryurl</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <help/>
+        <hint/>
+        <internal_type display_value="URL">url</internal_type>
+        <label>Repository URL</label>
+        <mandatory>true</mandatory>
+        <max_length>2048</max_length>
+        <model_id>b48335fa4f7b1a00298deed18110c76e</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_b48335fa4f7b1a00298deed18110c76e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:22:35</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>fab7317e4f7b1a00298deed18110c730</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Repository URL</sys_name>
+        <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+        <sys_update_name>var_dictionary_fab7317e4f7b1a00298deed18110c730</sys_update_name>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:28:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <sys_documentation element="u_repositoryurl" language="en" table="var__m_b48335fa4f7b1a00298deed18110c76e">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_repositoryurl</element>
+            <help/>
+            <hint/>
+            <label>Repository URL</label>
+            <language>en</language>
+            <name>var__m_b48335fa4f7b1a00298deed18110c76e</name>
+            <plural>Repository URL</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>reuben.stump</sys_created_by>
+            <sys_created_on>2016-06-07 21:22:35</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>00d7317e4f7b1a00298deed18110c74c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Repository URL</sys_name>
+            <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_b48335fa4f7b1a00298deed18110c76e_u_repositoryurl_en</sys_update_name>
+            <sys_updated_by>reuben.stump</sys_updated_by>
+            <sys_updated_on>2016-06-07 21:28:34</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="u_targethost" language="en" table="var__m_b48335fa4f7b1a00298deed18110c76e">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_targethost</element>
+            <help/>
+            <hint/>
+            <label>TargetHost</label>
+            <language>en</language>
+            <name>var__m_b48335fa4f7b1a00298deed18110c76e</name>
+            <plural>TargetHosts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>reuben.stump</sys_created_by>
+            <sys_created_on>2016-06-07 21:03:53</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>4e83b5fa4f7b1a00298deed18110c7b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>TargetHost</sys_name>
+            <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_b48335fa4f7b1a00298deed18110c76e_u_targethost_en</sys_update_name>
+            <sys_updated_by>reuben.stump</sys_updated_by>
+            <sys_updated_on>2016-06-07 21:03:53</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="u_domainsuffix" language="en" table="var__m_b48335fa4f7b1a00298deed18110c76e">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_domainsuffix</element>
+            <help/>
+            <hint/>
+            <label>Domain Suffix</label>
+            <language>en</language>
+            <name>var__m_b48335fa4f7b1a00298deed18110c76e</name>
+            <plural>Domain Suffixes</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>reuben.stump</sys_created_by>
+            <sys_created_on>2016-06-07 21:44:44</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>58ecf9be4f7b1a00298deed18110c79d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Domain Suffix</sys_name>
+            <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_b48335fa4f7b1a00298deed18110c76e_u_domainsuffix_en</sys_update_name>
+            <sys_updated_by>reuben.stump</sys_updated_by>
+            <sys_updated_on>2016-06-07 21:44:44</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="u_domain suffix" language="en" table="var__m_b48335fa4f7b1a00298deed18110c76e">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_domain suffix</element>
+            <help/>
+            <hint/>
+            <label>Domain Suffix</label>
+            <language>en</language>
+            <name>var__m_b48335fa4f7b1a00298deed18110c76e</name>
+            <plural>Domain Suffix</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>reuben.stump</sys_created_by>
+            <sys_created_on>2016-06-07 21:09:04</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>b9b4fdfa4f7b1a00298deed18110c73a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Domain Suffix</sys_name>
+            <sys_package display_value="Ansible Management" source="x_snc_ansible">5170a26c4f739600298deed18110c7f8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Ansible Management">5170a26c4f739600298deed18110c7f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_b48335fa4f7b1a00298deed18110c76e_u_domain suffix_en</sys_update_name>
+            <sys_updated_by>reuben.stump</sys_updated_by>
+            <sys_updated_on>2016-06-07 21:28:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>reuben.stump</sys_created_by>
+        <sys_created_on>2016-06-07 21:03:48</sys_created_on>
+        <sys_id>f88335fa4f7b1a00298deed18110c76e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>reuben.stump</sys_updated_by>
+        <sys_updated_on>2016-06-07 21:03:48</sys_updated_on>
+        <workflow_version display_value="Ansible-Pull - Run On Nodes">b88335fa4f7b1a00298deed18110c76e</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=b48335fa4f7b1a00298deed18110c76e^sys_id!=b88335fa4f7b1a00298deed18110c76e">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>
